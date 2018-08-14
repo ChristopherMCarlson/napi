@@ -8,6 +8,7 @@ const draw = function draw() {
   `
 }
 
+
 function addAPOD(data) {
   let template = ``
   template += `
@@ -19,9 +20,14 @@ function addAPOD(data) {
   document.getElementById('pic').innerHTML = template
 }
 
+function getPic() {
+  napiService.getPic(addAPOD)
+}
+
 export default class NapiController {
   constructor() {
     draw()
+    getPic()
   }
 
   getAPOD(e) {
@@ -38,7 +44,4 @@ export default class NapiController {
     })
   }
 
-  getPic() {
-    napiService.getPic(addAPOD)
-  }
 }
