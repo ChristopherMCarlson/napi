@@ -21,7 +21,8 @@ function addAPOD(data) {
 }
 
 function getPic() {
-  napiService.getPic(addAPOD)
+  addAPOD(napiService.getPic())
+
 }
 
 export default class NapiController {
