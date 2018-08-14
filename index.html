@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>NAPI</title>
+</head>
+
+<body>
+
+  <form class="form-inline d-flex align-items-center justify-content-center" onsubmit="app.controllers.napi.getAPOD(event)">
+    <div class="form-group">
+      <input type="date" class="form-control" name="date" placeholder="YYYY-MM-DD" />
+
+      <button type="submit" class="btn btn-primary" id="get-pic-button">Get APOD</button>
+    </div>
+  </form>
+  <div id="apod">
+
+  </div>
+
+
+  <script src="./main.js" type="module"></script>
+</body>
+
+</html>
