@@ -1,7 +1,5 @@
 import APOD from "../models/APOD.js"
 
-let apod = new APOD
-
 export default class NapiService {
   constructor() {
 
@@ -14,6 +12,9 @@ export default class NapiService {
       .then(function (res) {
         console.log(res)
         return res
+      })
+      .then(res => {
+        return (new APOD(res))
       })
   }
 }
